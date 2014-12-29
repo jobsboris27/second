@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Впервые делаю на jade и с помощью less и gulp</title>
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="favico.ico" type="image/x-icon"
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/font.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+  </head>
+  <body class="page">
+    <div class="wrapper">
+      <div class="sidebar">
+        <div class="logo"><img src="img/logo/logo.png" class="logo__img"></div>
+        <div class="call">
+          <h3 class="call__title">Заказать звонок</h3>
+          <form method="post" action="" class="call__form">
+            <div class="call__form__input_section">
+              <label for="name" class="call__label label_name">Ваше имя</label>
+              <input id="name" type="text" value="Константин" class="call__input input_name">
+            </div>
+            <div class="call__form__input_section">
+              <label for="phone" class="call__label label_phone">Телефон</label>
+              <input id="phone" type="text" value="+7 (999) 000-00-00" class="call__input input_phone">
+            </div>
+            <div class="call__form__date_section">
+              <label for="date" class="call__label label_date">Дата звонка</label>
+              <div class="call__select_wrapper">
+                <select class="call__select select_day">
+                  <option class="call__option option_day">0</option>
+                  <option class="call__option option_day">1</option>
+                  <option class="call__option option_day">2</option>
+                  <option class="call__option option_day">3</option>
+                  <option class="call__option option_day">4</option>
+                  <option class="call__option option_day">5</option>
+                  <option class="call__option option_day">6</option>
+                  <option class="call__option option_day">7</option>
+                  <option class="call__option option_day">8</option>
+                  <option class="call__option option_day">9</option>
+                  <option class="call__option option_day">10</option>
+                </select><a class="call__select_button"></a>
+              </div>
+              <div class="call__select_wrapper">
+                <select class="call__select select_month">
+                  <option class="call__option option_month">0</option>
+                  <option class="call__option option_month">1</option>
+                  <option class="call__option option_month">2</option>
+                  <option class="call__option option_month">3</option>
+                  <option class="call__option option_month">4</option>
+                  <option class="call__option option_month">5</option>
+                  <option class="call__option option_month">6</option>
+                  <option class="call__option option_month">7</option>
+                  <option class="call__option option_month">8</option>
+                  <option class="call__option option_month">9</option>
+                  <option class="call__option option_month">10</option>
+                  <option class="call__option option_month">11</option>
+                </select><a class="call__select_button"></a>
+              </div>
+            </div>
+            <textarea placeholder="Комментарий" class="call__text"></textarea>
+            <button class="call__send btn">Отправить</button>
+            <button class="call__clear btn">Очистить</button>
+          </form>
+        </div>
+        <div class="thumbnail">
+          <ul class="thumbnail__list">
+            <li class="thumbnail__list_item"><img src="img/thumb/1.jpg" class="thumbnail__list_item_img"></li>
+            <li class="thumbnail__list_item"><img src="img/thumb/1.jpg" class="thumbnail__list_item_img"></li>
+            <li class="thumbnail__list_item"><img src="img/thumb/1.jpg" class="thumbnail__list_item_img"></li>
+            <li class="thumbnail__list_item"><img src="img/thumb/1.jpg" class="thumbnail__list_item_img"></li>
+            <li class="thumbnail__list_item"><img src="img/thumb/1.jpg" class="thumbnail__list_item_img"></li>
+            <li class="thumbnail__list_item"><img src="img/thumb/1.jpg" class="thumbnail__list_item_img"></li>
+            <li class="thumbnail__list_item"><img src="img/thumb/1.jpg" class="thumbnail__list_item_img"></li>
+            <li class="thumbnail__list_item"><img src="img/thumb/1.jpg" class="thumbnail__list_item_img"></li>
+            <li class="thumbnail__list_item"><img src="img/thumb/1.jpg" class="thumbnail__list_item_img"></li>
+          </ul>
+        </div>
+        <div class="feddback">
+          <div class="feddback__adress">
+            <p>г. Москва, ул. Новая 246, офис 214.</p>
+          </div>
+          <div class="feddback__phone">
+            <p>+7(921) 322-12-32</p>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="slider__wrapper">
+          <ul class="slider__wrapper_list">
+            <li class="slider__wrapper_item active"><img src="img/slider/1.jpg" class="slider__wrapper_item_img">
+              <div class="slider__wrapper_description"><a href="#" class="slider__wrapper_item_link">iMac за пол цены</a>
+                <p class="slider__wrapper_item_description">Прини свой старый Mac  и получи скидку на новый!</p>
+              </div>
+            </li>
+            <li class="slider__wrapper_item"><img src="img/slider/2.jpg" class="slider__wrapper_item_img">
+              <div class="slider__wrapper_description"><a href="#" class="slider__wrapper_item_link">iPhone за много денег</a>
+                <p class="slider__wrapper_item_description">Кризис! Не проблема! Бери iPhone!</p>
+              </div>
+            </li>
+            <li class="slider__wrapper_item"><img src="img/slider/1.jpg" class="slider__wrapper_item_img">
+              <div class="slider__wrapper_description"><a href="#" class="slider__wrapper_item_link">iPad супер скидки</a>
+                <p class="slider__wrapper_item_description">Недорого!</p>
+              </div>
+            </li>
+          </ul><a href="#" class="slider__wrapper_nav next">След.</a><a href="#" class="slider__wrapper_nav prev">Пред.</a>
+        </div>
+        <div class="popularProduct">
+          <div class="popularProduct_head">
+            <h3 class="popularProduct__title">Популярные товары</h3>
+          </div>
+          <ul class="popularProduct__list">
+            <li class="popularProduct__list_item">
+              <div class="popularProduct__list_img_block"><img src="img/product/1.jpg" class="popularProduct__list_item_img"></div>
+              <div class="popularProduct__list_link_block"><a href="#" class="popularProduct__list_item_link">Apple Thunderb Display 27"</a></div>
+              <table class="popularProduct__list_item__option">
+                <tbody>
+                  <tr class="popularProduct__list_item__option_item">
+                    <td>Артикул</td>
+                    <td>42787825</td>
+                  </tr>
+                  <tr class="popularProduct__list_item__option_item">
+                    <td>Опция</td>
+                    <td>включена</td>
+                  </tr>
+                  <tr class="popularProduct__list_item__option_item">
+                    <td>Цвет</td>
+                    <td>Серябристый</td>
+                  </tr>
+                  <tr class="popularProduct__list_item__option_item">
+                    <td>Размер</td>
+                    <td>1280*1245*90</td>
+                  </tr>
+                  <tr class="popularProduct__list_item__option_item">
+                    <td>Вес</td>
+                    <td>9 кг</td>
+                  </tr>
+                </tbody>
+              </table>
+            </li>
+            <li class="popularProduct__list_item">
+              <div class="popularProduct__list_img_block"><img src="img/product/2_2.jpg" class="popularProduct__list_item_img"></div>
+              <div class="popularProduct__list_link_block"><a href="#" class="popularProduct__list_item_link">iMac 27"</a></div>
+              <table class="popularProduct__list_item__option">
+                <tbody>
+                  <tr class="popularProduct__list_item__option_item">
+                    <td>Артикул</td>
+                    <td>42787825</td>
+                  </tr>
+                  <tr class="popularProduct__list_item__option_item">
+                    <td>Опция</td>
+                    <td>включена</td>
+                  </tr>
+                  <tr class="popularProduct__list_item__option_item">
+                    <td>Цвет</td>
+                    <td>Серябристый</td>
+                  </tr>
+                  <tr class="popularProduct__list_item__option_item">
+                    <td>Размер</td>
+                    <td>1280*1245*90</td>
+                  </tr>
+                  <tr class="popularProduct__list_item__option_item">
+                    <td>Вес</td>
+                    <td>9 кг</td>
+                  </tr>
+                </tbody>
+              </table>
+            </li>
+            <li class="popularProduct__list_item">
+              <div class="popularProduct__list_img_block"><img src="img/product/3.jpg" class="popularProduct__list_item_img"></div>
+              <div class="popularProduct__list_link_block"><a href="#" class="popularProduct__list_item_link">iPhone 5s Gold 27"</a></div>
+              <table class="popularProduct__list_item__option">
+                <tbody>
+                  <tr class="popularProduct__list_item__option_item">
+                    <td>Артикул</td>
+                    <td>42787825</td>
+                  </tr>
+                  <tr class="popularProduct__list_item__option_item">
+                    <td>Опция</td>
+                    <td>включена</td>
+                  </tr>
+                  <tr class="popularProduct__list_item__option_item">
+                    <td>Цвет</td>
+                    <td>Серябристый</td>
+                  </tr>
+                  <tr class="popularProduct__list_item__option_item">
+                    <td>Размер</td>
+                    <td>1280*1245*90</td>
+                  </tr>
+                  <tr class="popularProduct__list_item__option_item">
+                    <td>Вес</td>
+                    <td>9 кг</td>
+                  </tr>
+                </tbody>
+              </table>
+            </li>
+          </ul>
+        </div>
+        <div class="discountProduct">
+          <div class="discountProduct_head">
+            <h3 class="discountProduct__title">Товары со скидкой</h3>
+          </div>
+          <ul class="discountProduct__list">
+            <li class="discountProduct__list_item">
+              <div class="discountProduct__list_img_block"><img src="img/product/2.jpg" class="discountProduct__list_item_img"></div>
+              <div class="discountProduct__list_link_block"><a href="#" class="discountProduct__list_item_link">iPad Air Wi-Fi 128GB - Silver</a></div>
+              <table class="discountProduct__list_item__option">
+                <tbody>
+                  <tr class="discountProduct__list_item__option_item">
+                    <td>Артикул</td>
+                    <td>42787825</td>
+                  </tr>
+                  <tr class="discountProduct__list_item__option_item">
+                    <td>Опция</td>
+                    <td>включена</td>
+                  </tr>
+                  <tr class="discountProduct__list_item__option_item">
+                    <td>Цвет</td>
+                    <td>Серябристый</td>
+                  </tr>
+                  <tr class="discountProduct__list_item__option_item">
+                    <td>Размер</td>
+                    <td>1280*1245*90</td>
+                  </tr>
+                  <tr class="discountProduct__list_item__option_item">
+                    <td>Вес</td>
+                    <td>9 кг</td>
+                  </tr>
+                </tbody>
+              </table>
+            </li>
+            <li class="discountProduct__list_item">
+              <div class="discountProduct__list_img_block"><img src="img/product/ipod.jpg" class="discountProduct__list_item_img"></div>
+              <div class="discountProduct__list_link_block"><a href="#" class="discountProduct__list_item_link">Apple iPod nano 7G 16 ГБ Blue</a></div>
+              <table class="discountProduct__list_item__option">
+                <tbody>
+                  <tr class="discountProduct__list_item__option_item">
+                    <td>Артикул</td>
+                    <td>42787825</td>
+                  </tr>
+                  <tr class="discountProduct__list_item__option_item">
+                    <td>Опция</td>
+                    <td>включена</td>
+                  </tr>
+                  <tr class="discountProduct__list_item__option_item">
+                    <td>Цвет</td>
+                    <td>Серябристый</td>
+                  </tr>
+                  <tr class="discountProduct__list_item__option_item">
+                    <td>Размер</td>
+                    <td>1280*1245*90</td>
+                  </tr>
+                  <tr class="discountProduct__list_item__option_item">
+                    <td>Вес</td>
+                    <td>9 кг</td>
+                  </tr>
+                </tbody>
+              </table>
+            </li>
+            <li class="discountProduct__list_item">
+              <div class="discountProduct__list_img_block"><img src="img/product/port.jpg" class="discountProduct__list_item_img"></div>
+              <div class="discountProduct__list_link_block"><a href="#" class="discountProduct__list_item_link">Роутер Wi-Fi Apple AirPort</a></div>
+              <table class="discountProduct__list_item__option">
+                <tbody>
+                  <tr class="discountProduct__list_item__option_item">
+                    <td>Артикул</td>
+                    <td>42787825</td>
+                  </tr>
+                  <tr class="discountProduct__list_item__option_item">
+                    <td>Опция</td>
+                    <td>включена</td>
+                  </tr>
+                  <tr class="discountProduct__list_item__option_item">
+                    <td>Цвет</td>
+                    <td>Серябристый</td>
+                  </tr>
+                  <tr class="discountProduct__list_item__option_item">
+                    <td>Размер</td>
+                    <td>1280*1245*90</td>
+                  </tr>
+                  <tr class="discountProduct__list_item__option_item">
+                    <td>Вес</td>
+                    <td>9 кг</td>
+                  </tr>
+                </tbody>
+              </table>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer__wrapper">
+        <div class="footer__logo"><img src="img/logo/logo-footer.png" class="footer__logo_img"></div>
+        <div class="footer__menu">
+          <div class="footer__menu_list">
+            <h3 class="footer__menu_list_title">О магазине</h3>
+            <ul class="footer__menu_list__link">
+              <li class="footer__menu_list__link_item"><a href="#" class="footer__menu_list__link_item_path">О нас</a></li>
+              <li class="footer__menu_list__link_item"><a href="#" class="footer__menu_list__link_item_path">Наши цены</a></li>
+              <li class="footer__menu_list__link_item"><a href="#" class="footer__menu_list__link_item_path">Наши скидки</a></li>
+              <li class="footer__menu_list__link_item"><a href="#" class="footer__menu_list__link_item_path">Акции</a></li>
+            </ul>
+          </div>
+          <div class="footer__menu_list">
+            <h3 class="footer__menu_list_title">Каталог</h3>
+            <ul class="footer__menu_list__link">
+              <li class="footer__menu_list__link_item"><a href="#" class="footer__menu_list__link_item_path">Смартфоны</a></li>
+              <li class="footer__menu_list__link_item"><a href="#" class="footer__menu_list__link_item_path">Планшеты</a></li>
+              <li class="footer__menu_list__link_item"><a href="#" class="footer__menu_list__link_item_path">Компьютеры</a></li>
+              <li class="footer__menu_list__link_item"><a href="#" class="footer__menu_list__link_item_path">Аксессуары</a></li>
+            </ul>
+          </div>
+          <div class="footer__menu_list">
+            <h3 class="footer__menu_list_title">Контакты</h3>
+            <ul class="footer__menu_list__link">
+              <li class="footer__menu_list__link_item"><a href="#" class="footer__menu_list__link_item_path">Телефоны</a></li>
+              <li class="footer__menu_list__link_item"><a href="#" class="footer__menu_list__link_item_path">Адреса</a></li>
+              <li class="footer__menu_list__link_item"><a href="#" class="footer__menu_list__link_item_path">Карта проезда</a></li>
+              <li class="footer__menu_list__link_item"><a href="#" class="footer__menu_list__link_item_path">Обратная связь</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__app"><a href="#" class="footer__app_link apple">Apple Store</a><a href="#" class="footer__app_link google">Google Play</a></div>
+        <div class="footer__social"><a href="#" class="footer__social_link vk">Вконтакте</a><a href="#" class="footer__social_link facebook">Фейсбук</a><a href="#" class="footer__social_link twitter">Твиттер</a></div>
+      </div>
+    </div>
+    <script src="js/vendor/jquery-1.10.2.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
