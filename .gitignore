@@ -1,0 +1,8 @@
+# Created by .ignore support plugin (hsz.mobi)
+app/css/normalize.css
+app/fonts
+app/js/vendor
+node_modules
+dev/bower
+dev/scripts/plugins
+dev/styles/plugins

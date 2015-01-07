@@ -1,0 +1,98 @@
+extends ../_layouts/layout
+
+block title
+     | Вторая работа (исправление верстки)
+
+block content
+    .page
+        .container
+            .sidebar
+                a(href="#").logo
+                    img(src="img/logo/logo.png").logo__img
+                    span.logo__text ЭпплShop
+                .call
+                    .call__inner
+                        .call__title Заказать звонок
+                        .call__form
+                            form(action="", method="post")
+                                label.call__row
+                                    .call__row-title Ваше имя
+                                    input(type="text", placeholder="Введите Имя").call__row-input
+                                label.call__row
+                                    .call__row-title Ваше имя
+                                    input(type="text", placeholder="Введите телефон").call__row-input.call__row-input_phone
+                                div.call__row.call__row_double
+                                    .call__row-title Дата звонка
+                                    .call__row-select--wrap
+                                        select.call__row-select
+                                            - for (var i = 1; i <= 24; i++)
+                                                option(value=i)= i
+                                        select.call__row-select
+                                            - for (var i = 1; i <= 60; i++)
+                                                option(value=i)= i
+                                textarea(placeholder="Комментарий").call__textarea
+                                .call__form-buttons
+                                    input(type="submit", value="Отправить").call__form-submit
+                                    a(href="#").call__form-clear Очистить
+                .thumbnail
+                    ul.thumbnail__list
+                        - for (var i = 0; i < 9; i++)
+                            li.thumbnail__item
+                                a(href="#").thumbnail__link
+                                    img(src="//lorempixel.com/70/70/nature/" + i).thumbnail__img
+                .contacts
+                    .contacts__inner
+                        .contacts__address г. Москва, ул. Новая 246, офис 214.
+                        a(href="tel.:+79999999999").contacts__phone +7(999) 999-99-99
+            .content
+                div.slider__wrapper
+                    ul.slider__wrapper_list
+                        li.slider__wrapper_item.active
+                            img.slider__wrapper_item_img(src="img/slider/1.jpg")
+                            div.slider__wrapper_description
+                                a.slider__wrapper_item_link(href="#") iMac за пол цены
+                                p.slider__wrapper_item_description Прини свой старый Mac  и получи скидку на новый!
+                        li.slider__wrapper_item
+                            img.slider__wrapper_item_img(src="img/slider/2.jpg")
+                            div.slider__wrapper_description
+                                a.slider__wrapper_item_link(href="#") iPhone за много денег
+                                p.slider__wrapper_item_description Кризис! Не проблема! Бери iPhone!
+                        li.slider__wrapper_item
+                            img.slider__wrapper_item_img(src="img/slider/1.jpg")
+                            div.slider__wrapper_description
+                                a.slider__wrapper_item_link(href="#") iPad супер скидки
+                                p.slider__wrapper_item_description Недорого!
+                    a.slider__wrapper_nav.next(href="#") След.
+                    a.slider__wrapper_nav.prev(href="#") Пред.
+
+                each section in ["Популярные товары", "Товары со скидкой"]
+                    .products
+                        .page-title
+                            .page-title__text= section
+
+                        ul.products__list
+                            each title, indx in ['Apple Thunderbolt Display', 'iMac 27', 'iPhone 5s Gold']
+                                li.products__list-item
+                                    a(href="#").products__list-item-inner
+                                        .products__item-title
+                                            .products__item-title-pic
+                                                img(src="//lorempixel.com/82/90/technics/" + indx)
+                                            .products__item-title-text--wrap
+                                                .product__title-text= title
+                                        .products__options-item
+                                            ul.products__options-item-list
+                                                li.products__options-item-item
+                                                    .products__options-item-key Артикул
+                                                    .products__option-value 3234234234
+                                                li.products__options-item-item
+                                                    .products__options-item-key Опция
+                                                    .products__option-value Включена
+                                                li.products__options-item-item
+                                                    .products__options-item-key Цвет
+                                                    .products__option-value Серебристый
+                                                li.products__options-item-item
+                                                    .products__options-item-key Размер
+                                                    .products__option-value 1280*1245*90
+                                                li.products__options-item-item
+                                                    .products__options-item-key Вес
+                                                    .products__option-value 9кг

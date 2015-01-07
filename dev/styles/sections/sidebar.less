@@ -1,0 +1,281 @@
+@import "../mix/mixins";
+
+/* --------- sidebar --------- */
+
+.page {
+  .container {
+    .clearfix;
+  }
+}
+
+.sidebar {
+  float: left;
+  width: 230px;
+}
+
+.logo {
+  display: block;
+  margin-bottom: 25px;
+}
+
+.logo__img {
+  max-width: 199px;
+  max-height: 57px;
+  display: block;
+}
+
+.logo__text {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+}
+
+.call {
+  background: #f4f6f9;
+  margin-bottom: 15px;
+}
+
+.call__inner {
+  padding: 14px 10px;
+}
+
+.call__row {
+  display: block;
+  margin-bottom: 11px;
+}
+
+.call__row-title {
+  .inlineblock;
+  width: 75px;
+  font-size: 14px;
+  color: #5c7b98;
+  line-height: 16px;
+  padding-top: 5px;
+}
+
+.call__title {
+  font-size: 25px;
+  color: #5c7b98;
+  line-height: 27px;
+  .electra_bold;
+  margin-bottom: 18px;
+}
+
+.call__row-input {
+  .input-text(129px);
+}
+
+.call__row-select--wrap {
+  .inlineblock;
+}
+
+.call__textarea {
+  .input-text(209px);
+  height: 55px;
+  resize: none;
+  margin-bottom: 15px;
+}
+
+.call__form-submit {
+  background: #00b9fe;
+  padding: 0;
+  margin: 0;
+  width: 90px;
+  height: 35px;
+  .inlineblock;
+  font-size: 15px;
+  .electra_bold;
+  border: 0 none;
+  color: #fff;
+}
+
+.call__form-clear {
+  .inlineblock;
+  text-decoration: none;
+  width: 90px;
+  height: 35px;
+  line-height: 35px;
+  background: #dae1eb;
+  text-align: center;
+  margin-left: 30px;
+  color: #fff;
+}
+.call__row-select {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 3px;
+}
+.call__row-select.opened .selectbox__display {
+  border-bottom: 0 none;
+  -webkit-border-radius: 3px 3px 0 0;
+  -moz-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  padding-bottom: 1px;
+}
+.call__row-select.opened .selectbox__display:hover {
+  background: #edecec;
+}
+.call__row-select.opened .selectbox__dropdown {
+  left: 0;
+  right: 0;
+}
+.call__row-select .selectbox__dropdown {
+  position: absolute;
+  top: 100%;
+  left: -9999px;
+  right: auto;
+  background: #ffffff;
+  border: 1px solid #bdbdbd;
+  border-top: 0 none;
+  -webkit-border-radius: 0 0 5px 5px;
+  -moz-border-radius: 0 0 5px 5px;
+  border-radius: 0 0 5px 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  overflow: hidden;
+  width: 51px;
+  z-index: 1000;
+}
+.call__row-select .selectbox__inner {
+  position: relative;
+}
+.call__row-select .selectbox__display {
+  width: 51px;
+  border: 1px solid #bdbdbd;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background: #ffffff;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+.call__row-select .selectbox__display:before,
+.call__row-select .selectbox__display:after {
+  content: "";
+  display: table;
+}
+.call__row-select .selectbox__display:after {
+  clear: both;
+}
+.call__row-select .selectbox__display-title {
+  float: left;
+  width: 20px;
+}
+.call__row-select .selectbox__title-text {
+  font-size: 12px;
+  line-height: 26px;
+  color: #686868;
+  padding-left: 11px;
+  height: 26px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.call__row-select .selectbox__display-btn {
+  width: 26px;
+  float: left;
+  height: 26px;
+  background: transparent;
+  top: 0;
+  right: 0;
+  position: absolute;
+}
+.call__row-select .selectbox__btn-icon {
+  width: 26px;
+  height: 26px;
+  background: url('../../img/app/select.jpg') center center no-repeat;
+}
+.call__row-select .selectbox__dropdown-item.selected .selectbox__item-link {
+  background: #edecec;
+}
+.call__row-select .selectbox__item-link {
+  font-size: 12px;
+  line-height: 14px;
+  color: #686868;
+  padding-left: 13px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  cursor: pointer;
+  display: block;
+}
+.call__row-select .selectbox__item-link:hover {
+  background: #edecec;
+}
+.call__row-select .selectbox__display-btn {
+  background-color: #00b9fe;
+}
+.call__row-select .selectbox__title-text {
+  padding-left: 4px;
+}
+.call__row-select .selectbox__dropdown {
+  max-height: 240px;
+  overflow: auto;
+}
+.call__row-select .jspVerticalBar,
+.call__row-select .jspTrack {
+  background-color: transparent !important;
+}
+.call__row-select .jspDrag {
+  background: #00b9fe;
+  width: 7px;
+}
+.thumbnail__link {
+  display: block;
+}
+
+/* --------- thumb --------- */
+
+.thumbnail {
+  margin-bottom: 23px;
+}
+
+.thumbnail__list {
+  .clearfix;
+  margin-left: -10px;
+}
+
+.thumbnail__item {
+  float: left;
+  margin-left: 10px;
+  margin-bottom: 4px;
+}
+
+/* --------- contacts --------- */
+
+.contacts {
+  background: #f4f6f9;
+}
+
+.contacts__inner {
+  padding: 16px 23px;
+  text-align: center;
+}
+
+.contacts__address {
+  background: url('../../img/thumb/place.png') 0 0 no-repeat;
+  padding-left: 20px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #5c7b98;
+  text-align: left;
+  margin-bottom: 18px;
+}
+
+.contacts__phone {
+  .inlineblock;
+  background: url("../../img/thumb/phone.png") 0 0 no-repeat;
+  padding-left: 25px;
+  font-size: 14px;
+  line-height: 21px;
+  color: #5c7b98;
+  text-decoration: none;
+}
+

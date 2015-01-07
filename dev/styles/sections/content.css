@@ -1,0 +1,311 @@
+/* --------- fonts --------- */
+/* --------- fonts --------- */
+@font-face {
+  font-family: 'elektra_light_probold';
+  src: url('/app/fonts/font-webfont.eot');
+  src: url('/app/fonts/font-webfont.eot?#iefix') format('embedded-opentype'), url('/app/fonts/font-webfont.woff2') format('woff2'), url('/app/fonts/font-webfont.woff') format('woff'), url('/app/fonts/font-webfont.ttf') format('truetype'), url('/app/fonts/font-webfont.svg#elektra_light_probold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'elektra_medium_proitalic';
+  src: url('/app/fonts/elektra_medium_pro_italic-webfont.eot');
+  src: url('/app/fonts/elektra_medium_pro_italic-webfont.eot?#iefix') format('embedded-opentype'), url('/app/fonts/elektra_medium_pro_italic-webfont.woff2') format('woff2'), url('/app/fonts/elektra_medium_pro_italic-webfont.woff') format('woff'), url('/app/fonts/elektra_medium_pro_italic-webfont.ttf') format('truetype'), url('/app/fonts/elektra_medium_pro_italic-webfont.svg#elektra_medium_proitalic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'elektra_light_proregular';
+  src: url('/app/fonts/elektra_light_pro-webfont.eot');
+  src: url('/app/fonts/elektra_light_pro-webfont.eot?#iefix') format('embedded-opentype'), url('/app/fonts/elektra_light_pro-webfont.woff2') format('woff2'), url('/app/fonts/elektra_light_pro-webfont.woff') format('woff'), url('/app/fonts/elektra_light_pro-webfont.ttf') format('truetype'), url('/app/fonts/elektra_light_pro-webfont.svg#elektra_light_proregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'elektra_medium_proregular';
+  src: url('/app/fonts/elektra_medium_pro-webfont.eot');
+  src: url('/app/fonts/elektra_medium_pro-webfont.eot?#iefix') format('embedded-opentype'), url('/app/fonts/elektra_medium_pro-webfont.woff2') format('woff2'), url('/app/fonts/elektra_medium_pro-webfont.woff') format('woff'), url('/app/fonts/elektra_medium_pro-webfont.ttf') format('truetype'), url('/app/fonts/elektra_medium_pro-webfont.svg#elektra_medium_proregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.electra {
+  font-family: 'elektra_medium_proregular';
+}
+.electra_bold {
+  font-family: 'elektra_light_probold';
+}
+.electra_light {
+  font-family: 'elektra_light_proregular';
+}
+.electra_italic {
+  font-family: 'elektra_medium_proitalic';
+}
+/* --------- colors --------- */
+/* --------- mixins --------- */
+.inlineblock {
+  display: inline-block;
+  vertical-align: top;
+}
+.clearfix {
+  *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
+  zoom: 1 !ie;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+/* --------- custom mixins --------- */
+/* --------- content --------- */
+.content {
+  width: 740px;
+  float: right;
+}
+.slider__wrapper {
+  overflow: hidden;
+  width: 740px;
+  height: 300px;
+  position: relative;
+  margin-bottom: 40px;
+}
+/* --------- slider --------- */
+.slider__wrapper_nav {
+  position: absolute;
+  top: 50%;
+  margin-top: -17px;
+  text-align: center;
+  width: 61px;
+  height: 34px;
+  line-height: 34px;
+  font-size: 18px;
+  font-family: 'elektra_light_probold';
+  text-decoration: none;
+  background: #f7f7f7;
+  font-weight: bold;
+  color: #5c7b98;
+  background: url(../../img/slider/nav.png) no-repeat;
+}
+.next {
+  right: 12px;
+  background-position: -136px 0;
+  padding-right: 9px;
+}
+.next:hover {
+  background-position: -136px -166px;
+  color: white;
+}
+.prev {
+  left: 12px;
+  padding-left: 9px;
+}
+.prev:hover {
+  background-position: 0px -166px;
+  color: white;
+}
+.slider__wrapper_list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 5000px;
+  height: 300px;
+  position: relative;
+  left: 0px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.slider__wrapper_item {
+  display: inline-block;
+  width: 740px;
+  height: 300px;
+  position: relative;
+}
+.slider__wrapper_description {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.slider__wrapper_item_description {
+  color: white;
+  padding: 4px 0 16px 20px;
+  display: block;
+  margin: 0px;
+}
+.slider__wrapper_item_link {
+  border-bottom: 1px solid #00b9fe;
+  display: inline-block;
+  margin: 15px 0 0 20px;
+  text-decoration: none;
+  line-height: 18px;
+  color: #00b9fe;
+  font-size: 18px;
+}
+/* --------- slider --------- */
+.page-title {
+  text-align: center;
+  overflow: hidden;
+}
+.page-title .page-title__text {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 25px;
+  color: #5c7b98;
+  position: relative;
+  padding: 0 15px;
+}
+.page-title .page-title__text:before,
+.page-title .page-title__text:after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 2000px;
+  background: #5c7b98;
+  top: 50%;
+  margin-top: -1px;
+  position: absolute;
+}
+.page-title .page-title__text:before {
+  left: 100%;
+}
+.page-title .page-title__text:after {
+  right: 100%;
+}
+/* --------- products --------- */
+.products {
+  margin-bottom: 33px;
+}
+.products__list {
+  margin-left: -25px;
+  *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
+  zoom: 1 !ie;
+}
+.products__list:before,
+.products__list:after {
+  content: "";
+  display: table;
+}
+.products__list:after {
+  clear: both;
+}
+.products__list-item {
+  float: left;
+  margin-left: 25px;
+  width: 228px;
+  list-style: none;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  border: 1px solid #dbe2eb;
+}
+.products__list-item:hover {
+  -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15);
+}
+.products__list-item:hover .product__title-text {
+  color: #613993;
+}
+.products__list-item-inner {
+  padding: 20px 14px 5px;
+  display: block;
+}
+.products__item-title {
+  *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
+  zoom: 1 !ie;
+  margin-bottom: 16px;
+}
+.products__item-title:before,
+.products__item-title:after {
+  content: "";
+  display: table;
+}
+.products__item-title:after {
+  clear: both;
+}
+.products__item-title-pic {
+  float: left;
+  width: 82px;
+  height: 90px;
+  position: relative;
+}
+.products__item-title-pic img {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.products__item-title-text--wrap {
+  float: right;
+  width: 115px;
+}
+.product__title-text {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  width: 115px;
+  height: 90px;
+  font-size: 15px;
+  line-height: 17px;
+  color: #00b9fe;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+.products__options-item-item {
+  *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
+  zoom: 1 !ie;
+  margin-bottom: 5px;
+}
+.products__options-item-item:before,
+.products__options-item-item:after {
+  content: "";
+  display: table;
+}
+.products__options-item-item:after {
+  clear: both;
+}
+.products__options-item-key,
+.products__option-value {
+  width: 90px;
+  float: left;
+  font-size: 14px;
+  line-height: 16px;
+  color: #5c7b98;
+}
+.products__option-value {
+  width: 100px;
+  float: right;
+}
+.call__row-select .selectbox__display-btn {
+  background-color: #00b9fe;
+}
+.call__row-select .selectbox__title-text {
+  padding-left: 4px;
+}
+.call__row-select .selectbox__dropdown {
+  max-height: 240px;
+  overflow: auto;
+}
+.call__row-select .jspVerticalBar,
+.call__row-select .jspTrack {
+  background-color: transparent !important;
+}
+.call__row-select .jspDrag {
+  background: #00b9fe;
+  width: 7px;
+}
+.thumbnail__link {
+  display: block;
+}
